@@ -1,9 +1,9 @@
 let teamStats = {};
+gameObject();
 const passTeamStats = Object.assign({}, teamStats);
 
-gameObject();
+let allPlayersArray;
 createAllPlayersArray(passTeamStats.home,passTeamStats.away);
-//object.value
 
 function gameObject(){
     teamStats = {
@@ -136,18 +136,15 @@ function createAllPlayersArray(homeKey, awayKey){
     const awayPlayersArray = awayArray.map(awayPlayers => 
         awayPlayers.players);
 
-    const allPlayersArray = [...homePlayersArray, ...awayPlayersArray]
+    allPlayersArray = [...homePlayersArray, ...awayPlayersArray]
     return allPlayersArray;
 }
 
+function numPointsScored (playerNameArg){
 
+    allPlayersArray.find()
 
-function numPointsScored(playerNameArgument){
-    
 }
-
-
-
 
 
 

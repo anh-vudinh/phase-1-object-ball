@@ -1,0 +1,30 @@
+// function numPointsScored(playerName){
+//     const game = gameObject();
+//     //const allPlayers = Object.assign({}, game.home.players, game.away.players)
+//     const allPlayers = {...game.home.players, ...game.away.players}
+//     return console.log(allPlayers[playerName].points);
+
+//     //console.log(allPlayers);
+
+//     // for(player in allPlayers){
+//     //     if (player === playerName){
+//     //         console.log("playerName:", player);
+//     //         //console.log("playerStats:",allPlayers[player])
+//     //         console.log(allPlayers[player].points);
+//     //         return allPlayers[player].points;
+//     //     }
+//     // }
+
+
+// }
+
+// function shoeSize(playerName){
+//     const game = gameObject();
+//     const allPlayers = {...game.home.players, ...game.away.players}
+//     return console.log(allPlayers[playerName].shoe);
+
+// }
+
+
+// numPointsScored('Brendan Haywood');
+// shoeSize('DeSagna Diop');
