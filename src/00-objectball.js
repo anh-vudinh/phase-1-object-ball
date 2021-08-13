@@ -1,10 +1,9 @@
 let teamStats = {};
-gameObject();
-let passTeamStats = Object.assign({}, teamStats);
-//numPointsScored("vu", passTeamStats);
+const passTeamStats = Object.assign({}, teamStats);
 
-console.log(teamStats);
-console.log(passTeamStats);
+gameObject();
+createAllPlayersArray(passTeamStats.home,passTeamStats.away);
+//object.value
 
 function gameObject(){
     teamStats = {
@@ -66,8 +65,8 @@ function gameObject(){
         },
     
         away: {
-            teamName: "Brooklyn Nets",
-            colors: ["Black", "White"],
+            teamName: "Charlotte Hornets",
+            colors: ['Turquoise, Purple'],
             players:{
                 "Jeff Adrien":{
                     number: 4,
@@ -125,11 +124,84 @@ function gameObject(){
     return teamStats;
 }
 
+function createAllPlayersArray(homeKey, awayKey){
+    const homeObject = homeKey;
+    const awayObject = awayKey;
+
+    const homeArray = [homeObject];
+    const awayArray = [awayObject];
+
+    const homePlayersArray = homeArray.map(homePlayers => 
+        homePlayers.players);
+    const awayPlayersArray = awayArray.map(awayPlayers => 
+        awayPlayers.players);
+
+    const allPlayersArray = [...homePlayersArray, ...awayPlayersArray]
+    return allPlayersArray;
+}
+
+
+
+function numPointsScored(playerNameArgument){
+    
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// (1)
+//BREAKDOWN
+// for (let {PROPERTY} in {ARRAY}){
+//     let value = [{ARRAY}][{PROPERTY}];
+//     console.log("key:", {PROPERTY}, "value", value);
+// }
+// (2)
+// for (let key in passTeamStats){
+//     let value = passTeamStats[key].colors;
+//     console.log("key:", key, "value:", value);
+// }
+// (3)
+// for (let key in passTeamStats){
+//     let value = passTeamStats[key].players;
+//     console.log("key:", key, "value:", value);
+// }
+// (4)
+// for (let key in passTeamStats){
+//     let value = passTeamStats[key].players;
+//     console.log("value:", value);
+// }
+//(5)
+
+
+
+
+
+
+
+
+//createArray();
+//console.log(testArray);
+
+
+    // for (let team in passTeamStats){
+    //     let value = passTeamStats[team]
+    //     //start off key again as playername
+    //     testArray = Object.assign({}, value);
+    //     //console.log(key,"value:", value);
+    //     return testArray;
+    // }
 
 
 
@@ -152,10 +224,6 @@ function gameObject(){
 //     }
 // }
 
-// for (let key in passTeamStats){
-//     let value = passTeamStats[key];
-//     //console.log("key:", key, "value",value);
-// }
 
 
 
